@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-
+import { signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -9,5 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './delacruz.html',
 })
 export class Delacruz {
+
+readonly myName = signal('Nicko Dela Cruz');
 
 }
