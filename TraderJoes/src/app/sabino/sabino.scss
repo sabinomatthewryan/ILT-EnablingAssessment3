@@ -1,0 +1,80 @@
+.profile-card {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-inline-start: 10px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: linear-gradient(135deg, #1976d2, #64b5f6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+mat-card-header {
+  justify-content: center;
+  margin-top: 16px;
+
+  ::ng-deep .mat-mdc-card-header-text {
+    text-align: center;
+  }
+  ::ng-deep .mat-mdc-card-title {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  ::ng-deep .mat-mdc-card-subtitle {
+    color: #1976d2;
+    font-weight: 500;
+  }
+}
+
+mat-chip-set {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 16px 0;
+
+  ::ng-deep .mdc-evolution-chip-set__chips {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.bio {
+  margin-top: 12px;
+  padding: 0 8px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  button {
+    border-radius: 24px;
+    padding: 0 24px;
+  }
+}
