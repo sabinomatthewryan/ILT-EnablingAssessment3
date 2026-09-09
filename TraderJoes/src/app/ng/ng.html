@@ -1,2 +1,10 @@
 <h2>{{ myName() }}</h2>
 <img [src]="imagePath()" [alt]="myName()" width="200" />
+<button (click)="toggleBio()">About Me</button>
+@if (showBio()) {
+  <p>
+    Hi, I'm Paula, a 4th year IT student focused on web development.
+    I enjoy turning clean designs into responsive, reusable components and
+    figuring out how each part of an application connects to the next.
+  </p>
+}

@@ -9,4 +9,9 @@ import { Component, signal } from '@angular/core';
 export class Ng {
   readonly myName = signal('Paula Mitchel Ng');
   readonly imagePath = signal('assets/ngg.jpg');
+  readonly showBio = signal(false);
+
+  toggleBio() {
+    this.showBio.update(v => !v);
+  }
 }
