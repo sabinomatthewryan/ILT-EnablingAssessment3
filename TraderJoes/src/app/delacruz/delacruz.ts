@@ -7,6 +7,7 @@ import { signal } from '@angular/core';
   styleUrl: './delacruz.scss',
   templateUrl: './delacruz.html',
 })
+
 export class Delacruz {
 readonly myName = signal('Nicko Dela Cruz');
 }
