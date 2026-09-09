@@ -10,4 +10,5 @@ import { Component, signal } from '@angular/core';
 })
 export class Delacruz {
   readonly myName = signal('Nicko Delacruz');
+  readonly imagePath = signal('assets/delacruz.png');
 }
