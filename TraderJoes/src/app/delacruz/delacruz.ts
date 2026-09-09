@@ -1,9 +1,12 @@
 import { Component, signal } from '@angular/core';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 @Component({
-  imports: [],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
   selector: 'app-delacruz',
   styleUrl: './delacruz.scss',
   templateUrl: './delacruz.html',
@@ -11,7 +14,7 @@ import { Component, signal } from '@angular/core';
 export class Delacruz {
   readonly myName = signal('Nicko Delacruz');
   readonly imagePath = signal('assets/delacruz.png');
-   readonly showBio = signal(false);
+  readonly showBio = signal(false);
 
    toggleBio() {
     this.showBio.update(v => !v);
