@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 
 
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   templateUrl: './delacruz.html',
 })
 export class Delacruz {
-
+  readonly myName = signal('Nicko Delacruz');
 }
