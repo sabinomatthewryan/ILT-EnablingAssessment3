@@ -8,6 +8,10 @@ import { Component, signal } from '@angular/core';
 })
 export class Lim {
     readonly myName = signal('Jereign Lim');
-      readonly imagePath = signal('assets/lim.png');
+    readonly imagePath = signal('assets/lim.png');
+    readonly showBio = signal(false);
 
+    toggleBio() {
+    this.showBio.update(v => !v);
+  }
 }
