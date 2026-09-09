@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './ng.scss',
   templateUrl: './ng.html',
 })
-export class Ng {}
+export class Ng {
+  readonly myName = signal('Paula Mitchel Ng');
+}
