@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './delacruz.scss',
   templateUrl: './delacruz.html',
 })
-export class Delacruz {}
+export class Delacruz {
+  
+readonly myName = signal('Nicko Dela Cruz');
+}
