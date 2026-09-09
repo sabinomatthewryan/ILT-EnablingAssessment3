@@ -7,5 +7,6 @@ import { Component, signal } from '@angular/core';
   templateUrl: './sabino.html',
 })
 export class Sabino {
-  readonly myName = signal('Matthew Sabino')
+  readonly myName = signal('Matthew Sabino');
+  readonly imagePath = signal('assets/sabino.jpeg');
 }
