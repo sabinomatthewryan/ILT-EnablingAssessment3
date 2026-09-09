@@ -8,6 +8,5 @@ import { signal } from '@angular/core';
   templateUrl: './delacruz.html',
 })
 export class Delacruz {
-  
 readonly myName = signal('Nicko Dela Cruz');
 }
