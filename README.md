@@ -2,6 +2,6 @@
 
 ## 🚀 Live Deployment
 
-- **Deployment URL:** [https://your-deployment-url-here.vercel.app](https://your-deployment-url-here.vercel.app) _(Placeholder)_
+- **Deployment URL:** [https://traderjoes-coral.vercel.app](https://traderjoes-coral.vercel.app)
 
 ---
