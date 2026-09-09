@@ -4,9 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { Lim } from './lim/lim';
 import { Sabino } from './sabino/sabino';
 import { Delacruz } from './delacruz/delacruz';
+import {Ng} from './ng/ng';
 
 @Component({
-  imports: [RouterOutlet, Lim, Sabino, Delacruz, MatIconModule],
+  imports: [RouterOutlet, Lim, Sabino, Delacruz, Ng, MatIconModule],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
