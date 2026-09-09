@@ -11,4 +11,9 @@ import { Component, signal } from '@angular/core';
 export class Delacruz {
   readonly myName = signal('Nicko Delacruz');
   readonly imagePath = signal('assets/delacruz.png');
+   readonly showBio = signal(false);
+
+   toggleBio() {
+    this.showBio.update(v => !v);
+  }
 }
