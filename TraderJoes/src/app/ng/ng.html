@@ -1,10 +1,33 @@
-<h2>{{ myName() }}</h2>
-<img [src]="imagePath()" [alt]="myName()" width="200" />
-<button (click)="toggleBio()">About Me</button>
-@if (showBio()) {
-  <p>
-    Hi, I'm Paula, a 4th year IT student focused on web development.
-    I enjoy turning clean designs into responsive, reusable components and
-    figuring out how each part of an application connects to the next.
-  </p>
-}
+<mat-card class="profile-card">
+  <div class="avatar-wrapper">
+    <img [src]="imagePath()" [alt]="myName()" class="avatar" />
+  </div>
+
+  <mat-card-header>
+    <mat-card-title>{{ myName() }}</mat-card-title>
+    <mat-card-subtitle>4th Year IT Student • Web Development</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-chip-set>
+      <mat-chip>Angular</mat-chip>
+      <mat-chip>React</mat-chip>
+      <mat-chip>Node.js</mat-chip>
+    </mat-chip-set>
+
+    @if (showBio()) {
+      <p class="bio">
+        Hi, I'm Paula, a 4th year IT student focused on web development.
+        I enjoy turning clean designs into responsive, reusable components and
+        figuring out how each part of an application connects to the next.
+      </p>
+    }
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="toggleBio()">
+      <mat-icon>{{ showBio() ? 'expand_less' : 'expand_more' }}</mat-icon>
+      {{ showBio() ? 'Hide' : 'About Me' }}
+    </button>
+  </mat-card-actions>
+</mat-card>
