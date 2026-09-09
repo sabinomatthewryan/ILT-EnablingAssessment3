@@ -8,4 +8,5 @@ import { Component, signal } from '@angular/core';
 })
 export class Ng {
   readonly myName = signal('Paula Mitchel Ng');
+  readonly imagePath = signal('assets/ngg.jpg');
 }
