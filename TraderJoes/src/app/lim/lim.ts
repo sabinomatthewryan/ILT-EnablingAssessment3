@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './lim.scss',
   templateUrl: './lim.html',
 })
-export class Lim {}
+export class Lim {
+    readonly myName = signal('Jereign Lim');
+}
