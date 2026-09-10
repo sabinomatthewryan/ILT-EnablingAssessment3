@@ -16,6 +16,6 @@ export class Sabino {
   readonly showBio = signal(false);
 
   toggleBio() {
-    this.showBio.update(v => !v);
+    this.showBio.update((isVisible) => !isVisible);
   }
 }
