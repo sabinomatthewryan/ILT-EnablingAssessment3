@@ -16,7 +16,7 @@
         </mat-chip-set>
 
 
-        @if (showBio()) {
+        @if (isBioVisible()) {
             <p class="bio">
                 An IT student passionate about data analysis, web dev, and building things that
                 actually work. Currently surviving midterms, coffee, and tackling last-minute
@@ -26,8 +26,8 @@
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="toggleBio()">
-            <mat-icon>{{ showBio() ? 'expand_less' : 'expand_more' }}</mat-icon>
-            {{ showBio() ? 'Hide' : 'About Me' }}
+            <mat-icon>{{ isBioVisible() ? 'expand_less' : 'expand_more' }}</mat-icon>
+            {{ isBioVisible() ? 'Hide' : 'About Me' }}
         </button>
     </mat-card-actions>
 </mat-card>

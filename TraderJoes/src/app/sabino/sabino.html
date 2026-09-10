@@ -15,7 +15,7 @@
       <mat-chip>Node.js</mat-chip>
     </mat-chip-set>
 
-    @if (showBio()) {
+    @if (isBioVisible()) {
       <p class="bio">
         Hi, I'm Matthew, an aspiring software engineer passionate about modern web technologies.
         I love crafting responsive interfaces, solving real-world development challenges,
@@ -26,8 +26,8 @@
 
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="toggleBio()">
-      <mat-icon>{{ showBio() ? 'expand_less' : 'expand_more' }}</mat-icon>
-      {{ showBio() ? 'Hide' : 'About Me' }}
+      <mat-icon>{{ isBioVisible() ? 'expand_less' : 'expand_more' }}</mat-icon>
+      {{ isBioVisible() ? 'Hide' : 'About Me' }}
     </button>
   </mat-card-actions>
 </mat-card>
