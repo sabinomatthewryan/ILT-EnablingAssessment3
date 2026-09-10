@@ -13,9 +13,9 @@ import { MatChipsModule } from '@angular/material/chips';
 export class Lim {
   readonly myName = signal('Jereign Lim');
   readonly imagePath = signal('assets/lim.png');
-  readonly showBio = signal(false);
+  readonly isBioVisible = signal(false);
 
-  toggleBio() {
-    this.showBio.update(v => !v);
+  toggleBio(): void {
+    this.isBioVisible.update((isVisible) => !isVisible);
   }
 }

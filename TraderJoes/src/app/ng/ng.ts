@@ -13,9 +13,9 @@ import { MatChipsModule } from '@angular/material/chips';
 export class Ng {
   readonly myName = signal('Paula Mitchel Ng');
   readonly imagePath = signal('assets/ngg.jpg');
-  readonly showBio = signal(false);
+  readonly isBioVisible = signal(false);
 
-  toggleBio() {
-    this.showBio.update(v => !v);
+  toggleBio(): void {
+    this.isBioVisible.update((isVisible) => !isVisible);
   }
 }

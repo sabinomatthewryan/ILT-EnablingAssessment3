@@ -4,7 +4,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 
-
 @Component({
   imports: [MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
   selector: 'app-delacruz',
@@ -14,9 +13,9 @@ import { MatChipsModule } from '@angular/material/chips';
 export class Delacruz {
   readonly myName = signal('Nicko Delacruz');
   readonly imagePath = signal('assets/delacruz.png');
-  readonly showBio = signal(false);
+  readonly isBioVisible = signal(false);
 
-   toggleBio() {
-    this.showBio.update(v => !v);
+  toggleBio(): void {
+    this.isBioVisible.update((isVisible) => !isVisible);
   }
 }
