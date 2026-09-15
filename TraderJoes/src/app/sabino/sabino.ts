@@ -13,7 +13,7 @@ export class Sabino {
   readonly role = '4th Year IT Student • Web Development';
   readonly skills = ['Angular', 'Typescript', 'Node.js'];
   readonly bio =
-    "Hi, I'm Matthew, an aspiring software engineer passionate about " +
+    'Hi, Im Matthew, an aspiring software engineer passionate about ' +
     'modern web technologies. I love crafting responsive interfaces, solving ' +
     'real-world development challenges, and building seamless user ' +
     'experiences with modern frameworks like Angular.';
