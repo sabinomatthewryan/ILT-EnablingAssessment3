@@ -1,21 +1,20 @@
-import { Component, signal } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
+import { Component } from '@angular/core';
+import { MemberPreview } from '../shared/member-preview/member-preview';
 
 @Component({
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
+  imports: [MemberPreview],
   selector: 'app-sabino',
   styleUrl: './sabino.scss',
   templateUrl: './sabino.html',
 })
 export class Sabino {
-  readonly myName = signal('Matthew Sabino');
-  readonly imagePath = signal('assets/sabino.jpeg');
-  readonly isBioVisible = signal(false);
-
-  toggleBio(): void {
-    this.isBioVisible.update((isVisible) => !isVisible);
-  }
+  readonly name = 'Matthew Ryan Sabino';
+  readonly imagePath = 'assets/sabino.jpeg';
+  readonly role = '4th Year IT Student • Web Development';
+  readonly skills = ['Angular', 'Typescript', 'Node.js'];
+  readonly bio =
+    "Hi, I'm Matthew, an aspiring software engineer passionate about " +
+    'modern web technologies. I love crafting responsive interfaces, solving ' +
+    'real-world development challenges, and building seamless user ' +
+    'experiences with modern frameworks like Angular.';
 }
