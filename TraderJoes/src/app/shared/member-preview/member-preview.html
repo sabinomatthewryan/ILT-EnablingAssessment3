@@ -1,0 +1,31 @@
+<mat-card class="profile-card">
+  <div class="avatar-wrapper">
+    <img [src]="imagePath()" [alt]="name()" class="avatar" />
+  </div>
+
+  <mat-card-header>
+    <mat-card-title>{{ name() }}</mat-card-title>
+    <mat-card-subtitle>{{ role() }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    @if (skills().length) {
+      <mat-chip-set>
+        @for (skill of skills(); track skill) {
+          <mat-chip>{{ skill }}</mat-chip>
+        }
+      </mat-chip-set>
+    }
+
+    @if (isBioVisible()) {
+      <p class="bio">{{ bio() }}</p>
+    }
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="toggleBio()">
+      <mat-icon>{{ isBioVisible() ? hideIcon : showIcon }}</mat-icon>
+      {{ isBioVisible() ? 'Hide' : 'About Me' }}
+    </button>
+  </mat-card-actions>
+</mat-card>
