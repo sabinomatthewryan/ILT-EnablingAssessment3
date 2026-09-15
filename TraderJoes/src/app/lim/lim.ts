@@ -1,21 +1,20 @@
-import { Component, signal } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
+import { Component } from '@angular/core';
+import { MemberPreview } from '../shared/member-preview/member-preview';
 
 @Component({
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
   selector: 'app-lim',
-  styleUrl: './lim.scss',
+  imports: [MemberPreview],
   templateUrl: './lim.html',
+  styleUrl: './lim.scss',
 })
 export class Lim {
-  readonly myName = signal('Jereign Lim');
-  readonly imagePath = signal('assets/lim.png');
-  readonly isBioVisible = signal(false);
-
-  toggleBio(): void {
-    this.isBioVisible.update((isVisible) => !isVisible);
-  }
+  readonly name = 'Jereign Lim';
+  readonly imagePath = 'assets/lim.png';
+  readonly role = '4th Year IT Student • Web Development';
+  readonly skills = ['Angular', 'React', 'Node.js'];
+  readonly bio =
+    "Hi, I'm Jereign — a 4th year IT student specializing in web " +
+    "development. I enjoy working across the stack, from building " +
+    "clean UI components to wiring up backend logic, and I'm always " +
+    "looking to pick up new frameworks.";
 }
