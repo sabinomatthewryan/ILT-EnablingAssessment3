@@ -1,33 +1,7 @@
-<mat-card class="profile-card">
-    <div class="avatar-wrapper">
-        <img [src]="imagePath()" [alt]="myName()" class="avatar" />
-    </div>
-
-    <mat-card-header>
-        <mat-card-title> {{ myName() }} </mat-card-title>
-        <mat-card-subtitle>4th Year IT Student • Web Development</mat-card-subtitle>
-    </mat-card-header>
-
-    <mat-card-content>
-    <mat-chip-set>
-      <mat-chip>Angular</mat-chip>
-      <mat-chip>Typescript</mat-chip>
-      <mat-chip>Node.js</mat-chip>
-    </mat-chip-set>
-
-    @if (isBioVisible()) {
-      <p class="bio">
-        Hi, I'm Matthew, an aspiring software engineer passionate about modern web technologies.
-        I love crafting responsive interfaces, solving real-world development challenges,
-        and building seamless user experiences with modern frameworks like Angular.
-      </p>
-    }
-  </mat-card-content>
-
-  <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="toggleBio()">
-      <mat-icon>{{ isBioVisible() ? 'expand_less' : 'expand_more' }}</mat-icon>
-      {{ isBioVisible() ? 'Hide' : 'About Me' }}
-    </button>
-  </mat-card-actions>
-</mat-card>
+<app-member-preview
+  [name]="name"
+  [imagePath]="imagePath"
+  [role]="role"
+  [skills]="skills"
+  [bio]="bio"
+></app-member-preview>
