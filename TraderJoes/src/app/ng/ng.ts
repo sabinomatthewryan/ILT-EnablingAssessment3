@@ -1,21 +1,19 @@
-import { Component, signal } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatChipsModule } from '@angular/material/chips';
+import { Component } from '@angular/core';
+import { MemberPreview } from '../shared/member-preview/member-preview';
 
 @Component({
-  imports: [MatCardModule, MatButtonModule, MatIconModule, MatChipsModule],
+  imports: [MemberPreview],
   selector: 'app-ng',
   styleUrl: './ng.scss',
   templateUrl: './ng.html',
 })
 export class Ng {
-  readonly myName = signal('Paula Mitchel Ng');
-  readonly imagePath = signal('assets/ngg.jpg');
-  readonly isBioVisible = signal(false);
-
-  toggleBio(): void {
-    this.isBioVisible.update((isVisible) => !isVisible);
-  }
+  readonly name = 'Paula Ng';
+  readonly imagePath = 'assets/ngg.jpg';
+  readonly role = '4th Year IT Student • Web Development';
+  readonly skills = ['Angular', 'React', 'Node.js'];
+  readonly bio =
+    "  Hi, I'm Paula, a 4th year IT student focused on web development" + 
+    " I enjoy turning clean designs into responsive, reusable components and" + 
+    " figuring out how each part of an application connects to the next.";
 }
